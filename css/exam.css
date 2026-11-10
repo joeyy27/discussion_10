@@ -56,6 +56,7 @@
     .gallery {
         background-color: purple;
         gap: 3%;
+        row-gap: 15px;
         justify-content: space-around;
         align-items: center;
     }
