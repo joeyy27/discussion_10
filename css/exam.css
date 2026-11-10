@@ -1,2 +1,72 @@
-/* The first line of your stylesheet **must** be your first name and your GSI. Add your name and GSI's name as a comment! */
+/* Joey Yang, GSI: Beck Mallwitz */
+
+.gallery {
+    box-sizing: border-box;
+    width: 85%;
+    margin: 0 auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 24%);
+    justify-content: space-around;
+    align-items: start;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+    border: 5px dashed orange;
+}
+@media (min-width: 550px) {
+    .gallery {
+        background-color: white;
+        gap: 5px;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    .gallery img:nth-child(4n) {
+        grid-column: 1 / -1;
+    }
+
+    .gallery img:nth-child(even) {
+        border-color: black;
+    }
+}
+
+@media (min-width: 800px) {
+    .gallery {
+        background-color: orange;
+        grid-template-columns: repeat(4, 18%);
+        padding: 5%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .gallery img {
+        border-color: white;
+        border-style: solid;
+    }
+
+    .gallery img:nth-child(even) {
+        border-style: dashed; 
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery {
+        background-color: purple;
+        gap: 3%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .gallery img,
+    .gallery img:nth-child(4n) {
+        grid-column: span 2;
+    }
+
+    .gallery img:nth-child(3n) {
+        grid-column: 2 / span 2;
+    }
+}
 
